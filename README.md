@@ -22,13 +22,11 @@ Good luck and have fun!
 
 
 # spots 
-An image sharing site
+The spot project is mainly focused on how webpage appearance and its functionalities
 ## Descriptiom
-Describe the project and its functionality
+In this project we wera able to set up the page with respect to sizes, fonts, and responsivness regardless of the using a mobile device, a tablet or even desktop.
 ## Tech stack
-html
-css
-responsive design 
+we first set the structure using HTML by followijng the BEM, thus CSS to style it according to Figma's data and finally made it responsive by using media.
 ## Deployment
- This webpage is 
-deployed to Github Pages 
+Finally we proceeded to deployment by using Github Pages, below you would find the link
+ 
