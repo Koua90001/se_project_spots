@@ -29,4 +29,4 @@ In this project we wera able to set up the page with respect to sizes, fonts, an
 we first set the structure using HTML by followijng the BEM, thus CSS to style it according to Figma's data and finally made it responsive by using media.
 ## Deployment
 Finally we proceeded to deployment by using Github Pages, below you would find the link
- 
+ https://koua90001.github.io/se_project_spots/

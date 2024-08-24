@@ -7,4 +7,27 @@
 .page__section {
   max-width: 1280px;
   margin: 0 auto;
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+
+}
+
+@media screen and (max-width: 627px) {
+  .page_section {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .page_section {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+
 }
