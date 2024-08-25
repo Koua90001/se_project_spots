@@ -22,11 +22,13 @@ Good luck and have fun!
 
 
 # spots 
-The spot project is mainly focused on how webpage appearance and its functionalities
+The spot project is mainly focused on webpage appearance and its functionalities
 ## Descriptiom
-In this project we wera able to set up the page with respect to sizes, fonts, and responsivness regardless of the using a mobile device, a tablet or even desktop.
+In this project we wera able to set up the page with respect to sizes, fonts, and responsivness regardless of using a mobile device, a tablet or even desktop.
 ## Tech stack
 we first set the structure using HTML by followijng the BEM, thus CSS to style it according to Figma's data and finally made it responsive by using media.
 ## Deployment
 Finally we proceeded to deployment by using Github Pages, below you would find the link
+deployment:
  https://koua90001.github.io/se_project_spots/
+ link: https://www.icloud.com/iclouddrive/084zZJsia3p4DGxrkHrL_3r4g#Screen_Recording_2024-08-24_at_11.04

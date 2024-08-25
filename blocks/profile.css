@@ -56,6 +56,10 @@
   display: flex;
   align-items: center;
 }
+.profile__edit-btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 
 .profile__add-btn {
 margin-left: auto;
@@ -70,6 +74,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+.profile__add-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;

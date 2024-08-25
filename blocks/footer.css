@@ -11,4 +11,5 @@
   font-weight: 400;
   color: rgba(33,33,33,0.7);
   line-height: 16px;
+  white-space: nowrap;
 }
