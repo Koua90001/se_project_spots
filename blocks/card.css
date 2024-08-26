@@ -47,11 +47,12 @@ width: 23px;
 height: 20px;
 border: none;
 background-color: transparent;
+opacity: 0.4;
 
 }
 
 .card__like-btn:hover {
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
 }
 
