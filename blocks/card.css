@@ -2,6 +2,20 @@
   max-width: 413px;
 }
 
+.card__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  color: #212121;
+  flex: 1;
+}
+
+
 .card__image {
   height: 413px;
   width: 413px;
@@ -47,27 +61,6 @@ background-color: transparent;
   grid-template-columns:
   repeat(auto-fit, minmax(250px, 1fr));
 }
-
-  .card__image {
-    height: 288px;
-    max-width: 288px;
-  }
-  .card__title {
-    font-size: 16px;
-    line-height: 16px;
-    max-width: 288px;
-  }
-  .card__content {
-    max-width: 288px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .card__list {
-    display: grid;
-    grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
-  }
 
   .card__image {
     height: 288px;
