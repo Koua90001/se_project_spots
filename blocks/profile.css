@@ -112,5 +112,22 @@ justify-content: center;
 
   .profile__add-btn {
     margin:0;
+    max-width: 288px;
+
   }
+}
+
+@media screen and (max-width: 320px) {
+  .profile {
+      padding: 10px 0 5px;
+  }
+
+  .profile__edit-btn {
+    margin-top: 10px;
+}
+
+.profile__add-btn {
+  width: 100%;
+}
+
 }
