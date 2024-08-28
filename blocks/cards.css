@@ -1,7 +1,7 @@
 .cards {
   padding: 20px 0 40px;
   border-bottom: 1px solid #21212166;
-  margin-bottom: 20px;
+
 
 }
 
@@ -29,14 +29,8 @@
 
 @media screen and (max-width: 320px) {
   .cards {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
-  .cards__list {
-    row-gap: 30px;
-    column-gap: 20px;
-  }
-  .footer {
-    margin-bottom: 20px;
-  }
+
 
 }
