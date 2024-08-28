@@ -53,6 +53,7 @@
   color: rgba(33, 33, 33, 0.7);
   font-size: 16px;
   line-height: 1;
+  font-weight: 500;
   border: none;
   display: flex;
   align-items: center;
@@ -119,11 +120,13 @@ justify-content: center;
 
 @media screen and (max-width: 320px) {
   .profile {
-      padding: 10px 0 5px;
+    margin-top: 20px;
   }
 
   .profile__edit-btn {
+    position: relative;
     margin-top: 10px;
+    margin-left: 20px;
 }
 
 .profile__add-btn {

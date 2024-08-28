@@ -1,6 +1,6 @@
 .footer {
   max-width: 104px;
-  margin: 0 auto;
+  margin: 20px auto 0;
   padding-top: 20px;
 }
 
@@ -14,3 +14,4 @@
   white-space: nowrap;
   margin:0;
 }
+
