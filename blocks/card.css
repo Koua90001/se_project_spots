@@ -61,6 +61,12 @@ margin-top: 12px;
   cursor: pointer;
 }
 
+
+ .card__footer {
+display: flex;
+ }
+
+
 @media screen and (max-width: 627px) {
 .card__list {
   display: grid;

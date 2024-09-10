@@ -116,5 +116,17 @@
 
   .modal__submit-btn {
     width: 100%;
-  }
 }
+}
+@media screen and (max-width: 320px) {
+  .modal__form {
+    padding-bottom: 24px;
+  }
+
+   .modal__submit-btn {
+    margin-bottom: 24px;
+   }
+
+}
+
+
