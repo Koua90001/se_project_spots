@@ -62,3 +62,23 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+const addCardButton = document.querySelector(".profile__add-button");
+const addCardModal = document.getElementById("add-card-modal");
+const addCardCloseButton = addCardModal.querySelector(".modal__close-button");
+
+addCardButton.addEventListener("click", () => {
+  openModal(addCardModal);
+});
+
+addCardCloseButton.addEventListener("click", () => {
+  closeModal(addCardModal);
+});
+
+function openModal(modal) {
+  modal.classList.add("modal_opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
+}
