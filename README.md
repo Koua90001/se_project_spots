@@ -32,3 +32,4 @@ Finally we proceeded to deployment by using Github Pages, below you would find t
 deployment:
  https://koua90001.github.io/se_project_spots/
  link: https://www.icloud.com/iclouddrive/084zZJsia3p4DGxrkHrL_3r4g#Screen_Recording_2024-08-24_at_11.04
+ 
