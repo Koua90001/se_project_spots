@@ -33,10 +33,14 @@
       <ul class="cards__list">
         <template id="card-template">
         <li class="card">
-          <img src="" alt="" class="card__image">
+          <div class="card__image-wrapper">
+            <img src="" alt="" class="card__image">
+          <button type="button" class="card__delete-btn"></button>
+        </div>
+
           <div class="card__footer">
             <h2 class="card__title"></h2>
-            <button aria-label="like card" class="card__like-btn" type="button"></button>
+            <button aria-label="like card" class="card__like-btn card__like-btn_liked" type="button"></button>
           </div>
         </li>
       </template>
@@ -93,7 +97,17 @@
       </form>
     </div>
   </div>
-</div>
+  <div class="modal" id="preview-modal">
+    <div class="modal__content modal__content_type_preview">
+    <button
+    aria-label="Close modal"
+    class="modal__close"
+    type="button"
+    ></button>
+    <img class="modal__image"src="" alt="" />
+    <p class="modal__caption"></p>
+    </div>
+  </div>
 <script defer src="./scripts/index.js"></script>
 </body>
 </html>
