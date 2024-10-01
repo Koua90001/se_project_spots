@@ -48,24 +48,25 @@ function getCardElement(data) {
 
 
   cardNameEl.textContent = data.name;
-  cardImage.src = data.link
-  cardImage.alt = data.name
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
 
   cardLikeBtn.addEventListener("click", () => {
     cardLikeBtn.classList.toggle("card__like-btn_liked");
+  });
 
     cardImage.addEventListener("click", () => {
       openModal(previewModal);
-      previewModalImage.src = data.link
-      previewModalCaption.alt = data.name
-      
+      previewModalImage.src = data.link;
+      previewModalCaption.alt = data.name;
+
     });
 
   cardDeleteBtn.addEventListener("click", () => {
     cardElement.remove();
   });
 
-  });
+
   return cardElement;
 }
 
@@ -124,6 +125,17 @@ addCardclosebtn.addEventListener("click", () => {
   closeModal(addCardModal);
 });
 cardForm.addEventListener("submit", handleAddCardSubmit);
+
+
+const closeModalBtns = document.querySelectorAll('.modal__close-btn');
+
+closeModalBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const modal = btn.closest('.modal');
+    closeModal(modal);
+  });
+});
+
 
 
 
