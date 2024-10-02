@@ -46,7 +46,7 @@
 }
 
 .card__like-btn {
-background-image: transparent url("../images/like\ button\ dark.svg") center no-repeat;
+background: transparent url("../images/like\ button\ light.svg") center no-repeat;
 width: 23px;
 height: 20px;
 border: none;
@@ -62,7 +62,7 @@ cursor: pointer;
 
 }
 .card__like-btn_liked {
-  background-image: url("../images/like\ button\ light.svg");
+  background: url("../images/like\ button\ dark.svg");
   opacity: 1;
 }
 
