@@ -63,7 +63,7 @@
 
 
 .modal__close-btn_type_preview {
-  background: transparent url(../images/close\ light\ btn.svg);
+  background: transparent url(../images/close\ dark\ x\ white\ .svg);
   top : 0;
   right : -52.5px;
   opacity: 1;
@@ -170,10 +170,19 @@ border-radius: 8px;
     width: 30px;
     height: 30px;
     background-size: 25px 25px;
+    position: relative;
+    align-self: flex-end;
   }
 
   .modal__caption {
     font-size: 14px;
+    padding: 4px 8px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: left;
+
   }
 
   .modal__input {

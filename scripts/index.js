@@ -74,6 +74,7 @@ function getCardElement(data) {
     openModal(previewModal);
     previewModalImage.src = data.link;
     previewModalCaption.alt = data.name;
+    previewModalCaption.textContent = data.name;
   });
 
   cardDeleteBtn.addEventListener("click", () => {
