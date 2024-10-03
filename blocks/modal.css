@@ -24,9 +24,9 @@
 
 .modal__container {
   background: white;
-  padding: 32px 50px;
+  padding: 16px;
   max-width: 730px;
-  width: 90%;
+  width:90%;
   box-sizing: border-box;
   position: relative;
   border-radius: 8px;
@@ -34,19 +34,22 @@
 
 .modal__content_type_preview {
   padding: 0;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   background-color: transparent;
   position: relative;
+  max-width: 75vh;
+  max-height: 75vw;
 
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 32px;
-  right: 50px;
+  top: 16px;
+  right: 16px;
   width: 40px;
   height: 40px;
   background:transparent url(../images/Closebutton.svg) center no repeat;
@@ -80,15 +83,14 @@ border-radius: 8px;
 }
 
 .modal__caption {
-  color: #212121;
+  color: white;
   margin: 10px 0 0 0;
   text-align: left;
   width: auto;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(33, 33, 33, 1);
   padding: 5px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  box-sizing: border-box;
   z-index: 1000
 
 }
@@ -164,23 +166,18 @@ border-radius: 8px;
   }
 
   .modal__close-btn {
-    top: -32px;
-    right: -12px;
+    top: -120px;
+    right: -10px;
     width: 30px;
     height: 30px;
-    background-size: 25px 25px;
+    background-size: 30px 30px;
     position: absolute;
     align-self: flex-end;
   }
 
   .modal__caption {
     font-size: 14px;
-    padding: 4px 8px;
-    font-family: Poppins, Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.2px;
-    text-align: left;
+    padding: 10px;
 
   }
 
@@ -195,6 +192,8 @@ border-radius: 8px;
   .modal__submit-btn {
     width: 100%;
 }
+
+
 }
 @media screen and (max-width: 320px) {
   .modal__form {
@@ -204,6 +203,7 @@ border-radius: 8px;
    .modal__submit-btn {
     margin-bottom: 24px;
    }
+
 
 }
 
