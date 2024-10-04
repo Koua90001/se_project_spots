@@ -1,3 +1,4 @@
+
 .modal {
   position: fixed;
   top:0;
@@ -48,12 +49,13 @@
 
 .modal__close-btn {
   position: absolute;
-  top: 80px;
   right: 16px;
   width: 40px;
   height: 40px;
-  background:transparent url(../images/Closebutton.svg) center no repeat;
+  background:transparent url(../images/close\ light\ btn.svg) center no repeat;
+  background-color: transparent;
   background-size: contain;
+  opacity: 0.4;
   border: none;
   cursor: pointer;
   z-index: 1000;
@@ -81,7 +83,6 @@ max-width: 80vw;
 max-height: 80vh;
 border-radius: 8px;
 width: 446.43px;
-height: 661px;
 top: 81px;
 left:497px;
 
@@ -91,13 +92,13 @@ left:497px;
 .modal__caption {
   color: white;
   margin: 10px 0 0 0;
-  text-align: left;
-  width: auto;
+  text-align:left;
   background: rgba(33, 33, 33, 1);
-  padding: 5px;
+  padding: 4px 8px;
   position: relative;
   box-sizing: border-box;
-  z-index: 1000
+  z-index: 1000;
+  border-radius: 8px;
 
 }
 
@@ -126,6 +127,10 @@ left:497px;
  gap: 8px;
  margin-bottom: 32px;
 
+}
+
+.modal__label:hover {
+  opacity: 0.4;
 }
 
 .modal__input {
@@ -161,7 +166,9 @@ left:497px;
 
   .modal__container {
     padding: 16px;
-    max-width: 90%;
+    width: 100vw;
+    margin:0;
+    max-width: 100vw;
     height: 336px;
     gap: 24px;
   }
@@ -172,8 +179,8 @@ left:497px;
   }
 
   .modal__close-btn {
-    top: -120px;
-    right: -12px;
+    top: -150px;
+    right: 0;
     width: 40px;
     height: 40px;
     background-size: 30px 30px;
@@ -183,17 +190,21 @@ left:497px;
 
   .modal__image {
     width: 288px;
+    max-width: 100vw;
+    margin:0;
+    padding:0;
     height: 426.57px;
     top: 89px;
-    left: 16px;
     border-radius: 4px;
 
   }
 
 
   .modal__caption {
+    left: 16px;
+    border-radius: 8px;
     font-size: 14px;
-    padding: 10px;
+    padding: 4px 8px;
 
   }
 
