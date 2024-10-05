@@ -53,7 +53,6 @@
   width: 40px;
   height: 40px;
   background:transparent url(../images/close\ light\ btn.svg) center no repeat;
-  background-color: transparent;
   background-size: contain;
   opacity: 0.4;
   border: none;
@@ -73,6 +72,8 @@
   top : 0;
   right : -52.5px;
   opacity: 1;
+
+
 }
 
 
@@ -169,7 +170,6 @@ left:497px;
     width: 100vw;
     margin:0;
     max-width: 100vw;
-    height: 336px;
     gap: 24px;
   }
 
@@ -179,14 +179,18 @@ left:497px;
   }
 
   .modal__close-btn {
-    top: -150px;
-    right: 0;
-    left: 264px;
     width: 40px;
     height: 40px;
     background-size: 30px 30px;
     position: absolute;
     align-self: flex-end;
+
+
+  }
+  .modal__close-btn_type_preview {
+    top: -40px;
+    right: 4px;
+    left: 264px;
   }
 
   .modal__image {
@@ -197,7 +201,13 @@ left:497px;
     height: 426.57px;
     top: 89px;
     border-radius: 4px;
+    left: 16px;
 
+  }
+
+  .modal__content_type_preview {
+    max-height: none;
+    height: fit-content;
   }
 
 
@@ -218,19 +228,19 @@ left:497px;
   }
 
   .modal__submit-btn {
-    width: 100%;
+    position: relative;
+    width: 276px;
+    height: 52px;
+    border-radius: 8px;
+    padding: 18px 32px;
+
+
 }
 
 
 }
+
 @media screen and (max-width: 320px) {
-  .modal__form {
-    padding-bottom: 24px;
-  }
-
-   .modal__submit-btn {
-    margin-bottom: 24px;
-   }
 
    .modal__container {
     width: 100%;
