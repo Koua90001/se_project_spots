@@ -1,12 +1,12 @@
 
 .modal {
+  display: flex;
   position: fixed;
   top:0;
   left:0;
-  bottom:0;
-  right:0;
+  width: 100%;
+  height: 100%;
   background-color: rgb(0, 0, 0, 0.5);
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -25,14 +25,10 @@
 
 .modal__container {
   position: relative;
-  margin: auto;
   background: white;
   padding: 32px;
-  max-width: 630px;
-  height: auto;
-  width:90%;
-  box-sizing: border-box;
-  position: relative;
+  width: 630px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
@@ -52,17 +48,17 @@
 
 .modal__close-btn {
   position: absolute;
-  right: 16px;
+  top: 50px;
+  right: 30px;
   width: 40px;
   height: 40px;
-  background-color:transparent url(../images/close\ light\ btn.svg) center no repeat;
-  background: none;
+  background: transparent url(../images/close\ light\ btn.svg) center no repeat;
   background-size: contain;
-  opacity: 0.4;
+  background: none;
   border: none;
   cursor: pointer;
   z-index: 1000;
-  transform: translateX(-10px)
+  opacity: 0.4;
 
 
 }
@@ -116,7 +112,7 @@ left:497px;
 
 
 .modal__title {
-  margin: 0 0 32px;
+  margin-bottom: 30px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 32px;
@@ -127,7 +123,7 @@ left:497px;
 .modal__form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 
 }
 
@@ -139,10 +135,7 @@ left:497px;
 
 
 .modal__label {
- display: flex;
- flex-direction: column;
- gap: 8px;
- margin-bottom: 32px;
+font-weight: bold;
 
 }
 
@@ -151,31 +144,30 @@ left:497px;
 }
 
 .modal__input {
-  display: block;
-  width: 100%;
-  max-width: 630px;
-  height: 52px;
-  padding: 16px 12px;
-  border-radius: 8px;
+  width: calc(100% - 22px);
+  padding: 10px;
+  border-radius: 4px;
   font-size: 20px;
   line-height: 1;
   font-weight: 500;
-  color: #212121;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  opacity: 0.4;
+  color: rgba(33, 33, 33, 0.4);
+  border: 1px solid #ddd;
+
 }
 
 .modal__submit-btn {
-  width: 156px;
-  height: 52px;
   padding: 18px 32px;
+  border: none;
   border-radius: 8px;
-  gap: 8px;
   background-color: rgba(33, 33, 33, 1);
   color: white;
+  cursor: pointer;
+  align-self:self-start;
 }
 
+.modal__submit-btn:hover {
+  background-color: #333;
+}
 
 @media screen and (max-width: 630px) {
   .modal {
