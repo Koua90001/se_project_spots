@@ -26,8 +26,9 @@
 .modal__container {
   position: relative;
   background: white;
-  padding: 32px;
-  width: 630px;
+  padding: 16px;
+  width: 90%;
+  max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -172,14 +173,18 @@ font-weight: bold;
 @media screen and (max-width: 630px) {
   .modal {
     padding: 0 10px;
+    max-width: 100%;
   }
 
   .modal__container {
     padding: 16px;
-    width: 100vw;
+    width: 100%;
     margin:0;
-    max-width: 100vw;
+    max-width: 100%;
     gap: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .modal__title {
@@ -198,6 +203,7 @@ font-weight: bold;
 
   .modal__close-btn_type_preview {
     top: -40px;
+    right: 10px;
     left: 264px;
 
 
@@ -209,10 +215,10 @@ font-weight: bold;
 
   .modal__image {
     width: 288px;
-    max-width: 100vw;
-    margin:0;
+    max-width: 100%;
+    margin:0 auto;
     padding:0;
-    height: 426.57px;
+    max-height: 426.57px;
     top: 89px;
     border-radius: 4px;
     left: 16px;
@@ -256,9 +262,9 @@ font-weight: bold;
 @media screen and (max-width: 320px) {
 
    .modal__container {
-    width: 100%;
-    max-width: none;
-    margin: 0 auto;
+   padding: 10px;
+   max-width: 260px;
+
 }
 
 }
