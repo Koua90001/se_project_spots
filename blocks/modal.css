@@ -12,7 +12,7 @@
   justify-content: center;
   padding: 0 20px;
   visibility: hidden;
-  opacity:0;
+  opacity:1;
   transition:visibility 0s linear 0.5s,opacity 0.5s linear;
 }
 
@@ -47,7 +47,8 @@
 
 .modal__close-btn {
   position: absolute;
-  right: 60px;
+  top: 40px;
+  right: 70px;
   width: 40px;
   height: 40px;
   background: transparent url(../images/close\ light\ btn.svg) center no repeat;
@@ -110,20 +111,25 @@ left:497px;
 
 
 .modal__title {
+  width: 149px;
+  height: 32px;
   margin-bottom: 30px;
+  margin-top: 20px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
   color: rgba(33, 33, 33, 1);
+  justify-content: space-between;
 }
 
 .modal__form {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 630px;
   border-radius: 8px;
+  width: 630px;
+  padding: 16px;
 
 }
 
@@ -178,7 +184,6 @@ width: 100%;
 
   .modal__container {
     padding: 16px;
-    width: 100%;
     margin:0;
     max-width: 100%;
     gap: 24px;
@@ -189,13 +194,21 @@ width: 100%;
   }
 
   .modal__title {
+    width: 276px;
+    height: 40px;
     font-size: 20px;
     margin: 10px 0 34px;
+
   }
 
-
+  .modal__form {
+    width: 100%;
+    gap: 24px;
+  }
 
   .modal__close-btn {
+    top: 5px;
+    right:3px;
     width: 40px;
     height: 40px;
     background-size: 40px 40px;
@@ -241,17 +254,9 @@ width: 100%;
 
   }
 
-  .modal__input {
-    padding: 0 16px;
-    max-width: 288px;
-
-
-
-  }
-
   .modal__label {
     margin-bottom: 24px;
-    max-width: 288px;
+
   }
 
   .modal__submit-btn {
@@ -261,7 +266,6 @@ width: 100%;
     border-radius: 8px;
     padding: 18px 32px;
 
-
 }
 
 
@@ -270,8 +274,11 @@ width: 100%;
 @media screen and (max-width: 320px) {
 
    .modal__container {
-   padding: 10px;
-   max-width: 260px;
+   padding: 12px;
+   max-width: 300px;
+   top: 134px;
+   border-radius: 8px;
+   gap: 24px;
 
 }
 
