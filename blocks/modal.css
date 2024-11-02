@@ -162,6 +162,21 @@ color: rgba(33, 33, 33, 0.7);
 
 }
 
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+display: block;
+color: rgba(255, 0, 0, 0.7);
+font-family: Poppins, Arial, Helvetica, sans-serif;
+font-weight: 500;
+size: 16px;
+line-height: 17.6px;
+margin-top: 8px;
+
+}
+
 .modal__submit-btn {
   padding: 18px 32px;
   border: none;
@@ -176,6 +191,11 @@ color: rgba(33, 33, 33, 0.7);
 
 .modal__submit-btn:hover {
   background-color: #333;
+}
+
+.modal__button-disabled {
+color: rgba(33, 33, 33, 1);
+
 }
 
 @media screen and (max-width: 630px) {
