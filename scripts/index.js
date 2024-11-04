@@ -104,14 +104,11 @@ function closeModalByOverlay(evt) {
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
-const handleEscapeKey = (evt) => {
+function closeModalEscape(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_opened");
-    if (openedModal) {
-document.removeEventListener("keydown", handleEscapeKey);
       closeModal(openedModal);
     }
-  }
 };
 
 function handleEditFormSubmit(evt) {
