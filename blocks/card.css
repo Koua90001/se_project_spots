@@ -47,13 +47,18 @@
 
 .card__like-btn {
 background: transparent url("../images/like\ button\ hover.svg") center no-repeat;
-width: 23px;
+width: 22px;
 height: 20px;
 border: none;
-background-color: transparent;
+background-size: cover;
 opacity: 0.4;
 margin-top: 12px;
 cursor: pointer;
+display: inline-block;
+line-height: 10px;
+
+
+
 
 }
 

@@ -91,10 +91,13 @@ function openModal(modal) {
   document.addEventListener("keydown", closeModalEscape);
 }
 function closeModal(modal) {
+  if (modal) {
   modal.classList.remove("modal_opened");
   modal.removeEventListener("mousedown", closeModalByOverlay);
   document.removeEventListener("keydown", closeModalEscape);
+  }
 }
+
 function closeModalByOverlay(evt) {
   if (evt.target.classList.contains("modal")) {
     closeModal(evt.target);
@@ -107,7 +110,10 @@ function closeModal(modal) {
 function closeModalEscape(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_opened");
+    if(openedModal) {
       closeModal(openedModal);
+    }
+
     }
 };
 
