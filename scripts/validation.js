@@ -51,6 +51,12 @@ const disableButton = (buttonElement, config) => {
     buttonElement.classList.add(config.inactiveButtonClass);
 
 };
+const resetValidation = (formEl, config) => {
+  const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
+  inputList.forEach((input) => {
+    hideInputError(formEl, input, config);
+  });
+};
 
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
