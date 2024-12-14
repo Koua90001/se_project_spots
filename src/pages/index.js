@@ -1,3 +1,7 @@
+import "./index.css";
+import { enableValidation, validationConfig, resetValidation, disableButton } from "../scripts/validation.js";
+import { config } from "webpack";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -136,7 +140,7 @@ function handleAddCardSubmit(evt) {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(editFormElement, settings)
+  resetValidation(editFormElement, config)
   openModal(editModal);
 });
 
@@ -163,3 +167,5 @@ closeModalBtns.forEach((btn) => {
     closeModal(modal);
   });
 });
+
+enableValidation(validationConfig);
