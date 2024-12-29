@@ -1,6 +1,6 @@
 import "./index.css";
 import { enableValidation, validationConfig, resetValidation, disableButton } from "../scripts/validation.js";
-import { config } from "webpack";
+import Api from "../utils/Api.js";
 
 const initialCards = [
   {
@@ -28,6 +28,29 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "a8969887-c598-4af8-b0fe-e88b1bb964df",
+    "Content-Type": "application/json",
+  },
+});
+
+api
+.getAppInfo()
+.then(([cards, users]) => {
+  cards.forEach((item) => {
+    const cardElement = getCardElement(item);
+    cardsList.append(cardElement);
+  });
+
+  profileEditButton.src = users.avatar;
+  profileName.textContent = users.name;
+  profileDescription.textContent = users.about;
+})
+.catch(console.error);
+
 
 //Profile elements
 const profileEditButton = document.querySelector(".profile__edit-btn");
@@ -119,9 +142,16 @@ function closeModalEscape(evt) {
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
-  profileName.textContent = editModalNameInput.value;
-  profileDescription.textContent = editModalDescriptionInput.value;
-  closeModal(editModal);
+  api
+  .editUserInfo({ name: "editModalNameInput.value", about: "editModalDescriptionInput.value" })
+  .then((data) => {
+
+    profileName.textContent = data.name;
+    profileDescription.textContent = data.about;
+    closeModal(editModal);
+  })
+  .catch(console.error);
+
 }
 
 function handleAddCardSubmit(evt) {
@@ -140,16 +170,13 @@ function handleAddCardSubmit(evt) {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(editFormElement, config)
+  resetValidation(editFormElement, validationConfig)
   openModal(editModal);
 });
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 
-initialCards.forEach((item) => {
-  const cardElement = getCardElement(item);
-  cardsList.append(cardElement);
-});
+
 
 const addCardButton = document.querySelector(".profile__add-btn");
 
