@@ -8,6 +8,7 @@
 
 .profile__avatar-container {
   position: relative;
+  margin-right: 20px;
 }
 
 .profile__avatar-btn {
@@ -17,15 +18,18 @@
   width: 100%;
   justify-content: center;
   position:absolute;
-
   visibility: hidden;
+  border-radius: 8px;
 }
 
 .profile__avatar-container:hover .profile__avatar-btn {
 visibility: visible;
+background-color: rgba(0, 0, 0, 0.5);
 }
+
 .profile__avatar-btn::after {
   content: "Edit Avatar";
+  color: white;
 }
 
 .profile__avatar {
@@ -35,6 +39,7 @@ visibility: visible;
   border-radius: 8px;
   object-fit: cover;
 }
+
 
 .profile__column {
   display: flex;
@@ -114,6 +119,16 @@ justify-content: center;
     padding-top: 20px;
   }
   .profile__avatar-btn {
+    position: absolute;
+    top: 52px;
+    left: 52px;
+    width: 23px;
+    height: 23px;
+    border-radius: 6px;
+    background-color: rgba(33, 33, 33, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     visibility: visible;
   }
 
