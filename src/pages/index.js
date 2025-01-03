@@ -2,6 +2,8 @@ import "./index.css";
 import { enableValidation, validationConfig, resetValidation, disableButton } from "../scripts/validation.js";
 import Api from "../utils/Api.js";
 
+
+
 const initialCards = [
   {
     name: "Val Thorens",
