@@ -33,11 +33,11 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 .profile__avatar {
-  margin-right: 20px;
+
   height: 190px;
   width: 190px;
-  border-radius: 8px;
-  object-fit: cover;
+  border-radius: 10px;
+
 }
 
 
@@ -90,6 +90,11 @@ background-color: rgba(0, 0, 0, 0.5);
 .profile__edit-btn:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.profile__pencil-icon {
+  color: #212121;
+  padding-right: 8px;
 }
 
 .profile__add-btn {
