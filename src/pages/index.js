@@ -204,7 +204,7 @@ function handleEditFormSubmit(evt) {
 
 }
 
-function handleAddCardSubmit(evt) {
+function handleSubmit(evt) {
   evt.preventDefault();
   const inputValues = {
     name: cardNameInput.value,
@@ -290,7 +290,7 @@ addCardButton.addEventListener("click", () => {
   openModal(addCardModal);
 });
 
-cardForm.addEventListener("submit", handleAddCardSubmit);
+cardForm.addEventListener("submit", handleSubmit);
 
 deleteForm.addEventListener("submit", handleDeleteCardSubmit);
 
