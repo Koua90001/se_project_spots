@@ -19,12 +19,12 @@
           <div class="profile__avatar-container">
           <button class="profile__avatar-btn">
             <img
-            src="<%=require('./images/avatar-light.svg')%>"
+            src="<%=require('./images/avatar pencil.svg')%>"
             alt="pencil icon"
             class="profile__pencil-icon" />
           </button>
           <img
-            src="<%=require('./images/avatar.jpg')%>"
+            src="<%=require('./images/Avatar.svg')%>"
             alt=""
             class="profile__avatar"
           />
@@ -76,7 +76,6 @@
       <div class="modal" id="edit-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img src="<%=require('./images/Closebutton.svg')%>" alt="" />
           </button>
           <h2 class="modal__title">Edit profile</h2>
           <form name="edit-profile" class="modal__form" novalidate>
@@ -114,7 +113,6 @@
       <div class="modal" id="add-card-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img src="<%=require('./images/Closebutton.svg')%>" alt="" class="" />
           </button>
           <h2 class="modal__title">New post</h2>
           <form id="add-card-form" class="modal__form" novalidate>
@@ -170,7 +168,7 @@
         <h2 class="modal__title">Edit profile avatar</h2>
         <form name="edit-avatar-form" class="modal__form" id="edit-avatar-form" novalidate>
           <label for="profile-avatar-input" class="modal__label">
-            Profile 
+            Profile
             <input
               id="profile-avatar-input"
               name="avatar"

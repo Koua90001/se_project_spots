@@ -28,7 +28,7 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 .profile__avatar-btn::after {
-  content: "Edit Avatar";
+  content: "";
   color: white;
 }
 
