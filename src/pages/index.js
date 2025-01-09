@@ -131,18 +131,16 @@ function getCardElement(data) {
   cardDeleteBtn.addEventListener("click", () =>
     handleDeleteCard(cardElement, data._id));
 
-  cardImage.addEventListener("click", () => handleImageClick(data._id));
+  cardImage.addEventListener("click", () => handleImageClick(data));
 
-  cardImage.addEventListener("click", () => {
-    openModal(previewModal);
+  function handleImageClick(data) {
     previewModalImage.src = data.link;
     previewModalImage.alt = data.name;
     previewModalCaption.textContent = data.name;
-  });
+    openModal(previewModal);
+  }
 
-  cardDeleteBtn.addEventListener("click", () => {
-    cardElement.remove();
-  });
+
 
   return cardElement;
 }
@@ -308,6 +306,10 @@ closeModalBtns.forEach((btn) => {
     const modal = btn.closest(".modal");
     closeModal(modal);
   });
+});
+
+deleteCancelButton.addEventListener("click", () => {
+  closeModal(deleteModal);
 });
 
 enableValidation(validationConfig);
