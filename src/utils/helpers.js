@@ -11,13 +11,13 @@ export function SetButtonText(
   }
 }
 
-export function handleAddCardSubmit(request, evt, loadingText = "Saving...") {
+export function handleSubmit(request, evt, loadingText = "Saving...") {
   evt.preventDefault();
 
-  const submitBtn = evt.submitter;
-  const initialText = submitBtn.textContent;
+  const submitButton = evt.submitter;
+  const initialText = submitButton.textContent;
 
-  SetButtonText(true, submitBtn, initialText, loadingText);
+  SetButtonText(true, submitButton, initialText, loadingText);
 
   request()
     .then(() => {
@@ -25,6 +25,6 @@ export function handleAddCardSubmit(request, evt, loadingText = "Saving...") {
     })
     .catch(console.error)
     .finally(() => {
-      SetButtonText(false, submitBtn, initialText);
+      SetButtonText(false, submitButton, initialText);
     });
 }

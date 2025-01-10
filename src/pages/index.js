@@ -202,50 +202,31 @@ function handleEditFormSubmit(evt) {
 
 }
 
-function handleSubmit(evt, apiCall, onSuccess) {
+function handleSubmit(evt) {
   evt.preventDefault();
+  const inputValues = {
+    name: cardNameInput.value,
+    link: cardLinkInput.value,
+  };
   const submitButton = evt.submitter;
-  const originalText = submitButton.textContent;
-  submitButton.textContent = "Saving...";
+  SetButtonText(true, submitButton);
 
-  apiCall()
-      .then((data) => {
-          onSuccess(data);
-      })
-      .catch(console.error)
-      .finally(() => {
-          submitButton.textContent = originalText;
-      });
+  api
+  .addCard(inputValues)
+  .then((newCard) => {
+    const newCardElement = getCardElement(inputValues);
+    cardsList.prepend(newCardElement);
+    evt.target.reset();
+    disableButton(cardSubmitButton, validationConfig);
+    closeModal(addCardModal);
+
+  })
+  .finally(() => {
+    SetButtonText(false, submitButton);
+
+  });
 
 
-
-  cardForm.addEventListener("submit", (evt) =>
-    {
-      const inputValues = {
-        name: cardNameInput.value,
-        link: cardLinkInput.value,
-      };
-
-      handleSubmit(evt, () =>
-        api.addCard(inputValues), (newCard) => {
-        const newCardElement = getCardElement(newCard);
-        cardsList.prepend(newCardElement);
-        evt.target.reset();
-        disableButton(cardSubmitButton, validationConfig);
-        closeModal(addCardModal);
-    });
-    });
-
- // api
-  //.addCard(inputValues)
-//  .then((newCard) => {
-//    const newCardElement = getCardElement(inputValues);
-//    cardsList.prepend(newCardElement);
-//    evt.target.reset();
-//    disableButton(cardSubmitButton, validationConfig);
-//    closeModal(addCardModal);
-
-//  })
 }
 
 
@@ -313,7 +294,7 @@ addCardButton.addEventListener("click", () => {
   openModal(addCardModal);
 });
 
-
+cardForm.addEventListener("submit", handleSubmit);
 
 deleteForm.addEventListener("submit", handleDeleteCardSubmit);
 
