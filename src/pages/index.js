@@ -202,25 +202,50 @@ function handleEditFormSubmit(evt) {
 
 }
 
-function handleSubmit(evt) {
+function handleSubmit(evt, apiCall, onSuccess) {
   evt.preventDefault();
-  const inputValues = {
-    name: cardNameInput.value,
-    link: cardLinkInput.value,
-  };
-  api
-  .addCard(inputValues)
-  .then((newCard) => {
-    const newCardElement = getCardElement(inputValues);
-    cardsList.prepend(newCardElement);
-    evt.target.reset();
-    disableButton(cardSubmitButton, validationConfig);
-    closeModal(addCardModal);
+  const submitButton = evt.submitter;
+  const originalText = submitButton.textContent;
+  submitButton.textContent = "Saving...";
 
-  });
+  apiCall()
+      .then((data) => {
+          onSuccess(data);
+      })
+      .catch(console.error)
+      .finally(() => {
+          submitButton.textContent = originalText;
+      });
 
 
 
+  cardForm.addEventListener("submit", (evt) =>
+    {
+      const inputValues = {
+        name: cardNameInput.value,
+        link: cardLinkInput.value,
+      };
+
+      handleSubmit(evt, () =>
+        api.addCard(inputValues), (newCard) => {
+        const newCardElement = getCardElement(newCard);
+        cardsList.prepend(newCardElement);
+        evt.target.reset();
+        disableButton(cardSubmitButton, validationConfig);
+        closeModal(addCardModal);
+    });
+    });
+
+ // api
+  //.addCard(inputValues)
+//  .then((newCard) => {
+//    const newCardElement = getCardElement(inputValues);
+//    cardsList.prepend(newCardElement);
+//    evt.target.reset();
+//    disableButton(cardSubmitButton, validationConfig);
+//    closeModal(addCardModal);
+
+//  })
 }
 
 
@@ -272,8 +297,8 @@ function handleLike(evt, id) {
 }
 
 profileEditButton.addEventListener("click", () => {
-  profileName.textContent = editModalNameInput.value;
-  profileDescription.textContent = editModalDescriptionInput.value;
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
   resetValidation(editFormElement, validationConfig);
   openModal(editModal);
 });
@@ -288,7 +313,7 @@ addCardButton.addEventListener("click", () => {
   openModal(addCardModal);
 });
 
-cardForm.addEventListener("submit", handleSubmit);
+
 
 deleteForm.addEventListener("submit", handleDeleteCardSubmit);
 
