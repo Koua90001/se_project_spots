@@ -59,14 +59,14 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
-  resolve: {
-    fallback: {
-      vm: require.resolve("vm-browserify")
-    }
-  },
-  resolve: {
-    fallback: {
-      stream: require.resolve("stream-browserify")
-    }
-  }
-};
+ // resolve: {
+  //  fallback: {
+  //    vm: require.resolve("vm-browserify"),
+  //  },
+  //},
+ // resolve: {
+ //   fallback: {
+ //     stream: require.resolve("stream-browserify"),
+  //  },
+  //},
+}
